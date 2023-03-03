@@ -1,8 +1,8 @@
-#include <iostream>
-#include <cstdlib>  // arr[i] = rand() % (10 + 1 - 1) + 1; // [1 ...10] Случайные числа  массива
-#include <ctime> //srand(time(NULL)); Случайные числа  массива
-#include <algorithm> // функция  stor  Быстрая сортировка std::sort(arr, arr + size);  
-// функцию swap Сортировка через сравнениемассивов std::swap(arr[j], arr[j + 1]);
+п»ї#include <iostream>
+#include <cstdlib>  // arr[i] = rand() % (10 + 1 - 1) + 1; // [1 ...10] РЎР»СѓС‡Р°Р№РЅС‹Рµ С‡РёСЃР»Р°  РјР°СЃСЃРёРІР°
+#include <ctime> //srand(time(NULL)); РЎР»СѓС‡Р°Р№РЅС‹Рµ С‡РёСЃР»Р°  РјР°СЃСЃРёРІР°
+#include <algorithm> // С„СѓРЅРєС†РёСЏ  stor  Р‘С‹СЃС‚СЂР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР° std::sort(arr, arr + size);  
+// С„СѓРЅРєС†РёСЋ swap РЎРѕСЂС‚РёСЂРѕРІРєР° С‡РµСЂРµР· СЃСЂР°РІРЅРµРЅРёРµРјР°СЃСЃРёРІРѕРІ std::swap(arr[j], arr[j + 1]);
 
 template <typename T>
 void in_mass(T arr[], const int length) {
@@ -25,6 +25,22 @@ double func(T arr[], const int length) {
 	for (int i = 0; i < length; i++)
 		sum += arr[i];
 	return (double) sum/length;
+
+	int max_element(int arr[], const int n) {
+		int max = arr[0];
+		for (int i = 1; i < n; i++)
+			max = max > arr[i]?  max:arr[i];
+		std::count << "\nMax velue type (int): \n";
+		return max;
+	}
+	double max_element(int arr[], int n) {
+		double max = arr[0];
+		for (int i = 1; i < n; i++)
+			max = max > arr[i]? max:arr[i];
+		std::count << "\nMax velue type (double): \n";
+		return max;
+	}
+
 }
 
 int main() {
@@ -48,13 +64,27 @@ A function must have one required parameter.*/
 Create an inline function that
 takes three numbers and returns their average
 arithmetic. */
-	std::cout << "Task2.\nCreate an inline function that takes three numbers and returns their average airthmetic \n";
+	/*std::cout << "Task2.\nCreate an inline function that takes three numbers and returns their average airthmetic \n";
 	const int size1 = 3;	
 	int array1[size1]{};
 	std::cout << "Enter three numbers -> \n";
 	std::cin >> array1[0] >> array1[1] >> array1[2];
-	std::cout << "Their average arithmetic: " << func(array1, size1) << std::endl;
+	std::cout << "Their average arithmetic: " << func(array1, size1) << std::endl;*/
 
+
+	/*Task 3
+Create an overloaded function to find
+the maximum of the three values вЂ‹вЂ‹passed to it.
+The function must support the int, short, and double types.
+Also, the function must output the type of the passed to it
+values.*/
+
+	std::cout << "Task2.\nCreate an overloaded function to find	the maximum of the three values вЂ‹вЂ‹passed to it, and must output the type of the passed to it values. \n";
+	
+	int x[]{ 8, -9, 25 };
+	double y[]{ 8745.854687954, -9456.25125478451, 457.2521554789 };
+	float z[]{ 0.568, -2.2562, 1.54825 };
+	std::cout <<  max_element(x, 3);
 
 	return 0;
 }
