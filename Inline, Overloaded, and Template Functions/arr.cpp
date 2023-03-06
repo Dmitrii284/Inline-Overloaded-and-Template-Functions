@@ -12,10 +12,9 @@ void in_mass(T arr[], const int length) {
 	std::cout << "\b\b]\n";
 }
 
-int mass(int arr[], const int length = 5) {
-	int sum = 0;
-	for (int i = 0; i < length; i++)		
-	     sum += arr[i];
+double mass(double a, double b, double c, double d, double e) {
+	double sum = 0;
+	sum = a + b + c + d + e;
 	return sum;
 }
 template <typename T>
@@ -24,7 +23,6 @@ double func(T arr[], const int length) {
 	for (int i = 0; i < length; i++)
 		sum += arr[i];
 	return (double)sum / length;
-
 }
 
 	long max_element(int arr[], int n) {
@@ -49,23 +47,25 @@ double func(T arr[], const int length) {
 		return float(max);
 	}
 
+	int main() {
+		setlocale(LC_ALL, "Rus");
 
-int main() {
-	setlocale(LC_ALL, "Rus");
-	
-	/* Task 1
-Create a function that accepts from 1 to
-5 (inclusive) different numbers, after which
-returns their sum. To solve it is necessary
-use the default settings. Please note that in
-A function must have one required parameter.*/
-	/*std::cout << "Task 1. \nCreate a function that accepts from 1 to 5 (inclusive)different numbers, after which returns their sum.\n";
-	const int size = 5;
-	int array[size]{ 7, 10, 50, 100, 13 };
-	std::cout << "Initial array of nambers \n";
-	in_mass(array, size);
-	std::cout<<"Sum array elementh: "<<mass(array)<<std::endl;
-	std::cout << "\n\n";*/
+		/* Task 1
+	Create a function that accepts from 1 to
+	5 (inclusive) different numbers, after which
+	returns their sum. To solve it is necessary
+	use the default settings. Please note that in
+	A function must have one required parameter.*/
+	std::cout << "Task 1. \nCreate a function that accepts from 1 to 5 (inclusive)different numbers, after which returns their sum. \n";
+	std::cout << "Initial five nambers -> \n";
+	double num1 = 0;
+	double num2 = 0;
+	double num3 = 0;
+	double num4 = 0;
+	double num5 = 0;
+	std::cin >> num1 >> num2 >> num3 >> num4 >> num5;		
+	std::cout<<"Sum array elementh: "<< mass(num1, num2, num3, num4, num5) <<std::endl;
+	std::cout << "\n\n";
 
 	/*Task 2
 Create an inline function that
@@ -86,14 +86,14 @@ The function must support the int, short, and double types.
 Also, the function must output the type of the passed to it
 values.*/
 
-	std::cout << "Task3.\nCreate an overloaded function to find	the maximum of the three values ​​passed to it, and must output the type of the passed to it values. \n";
+	/*std::cout << "Task3.\nCreate an overloaded function to find	the maximum of the three values ​​passed to it, and must output the type of the passed to it values. \n";
 	
 	int x[]{ 8, -9, 25 };
 	double y[]{ 8745.854687954, -9456.25125478451, 457.2521554789 };
 	float z[]{ 0.568, -2.2562, 1.54825 };
 	std::cout << max_element(x, 3);
 	std::cout << max_element(y, 3);
-	std::cout << max_element(z, 3);
+	std::cout << max_element(z, 3);*/
 
 	/*Task 4
 		Write a template function that takes
