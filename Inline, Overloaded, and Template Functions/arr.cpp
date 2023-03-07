@@ -49,16 +49,18 @@ double func(T arr[], const int length) {
 	}
 	/* Task 4*/
 	template <typename T>
-	T func1(T arr[], T num) {
-		int counter;
-		for (int i = 0; i < num; i++)
-			counter = 0;
-			for (int j = 1; j < num; j++) {
-				if (arr[i] % j == 0)
+	T Prime(T arr[], T length) {
+		for (int i = 0; i < length; i++) {
+			int counter = 0;
+			for (int k = 1; k < length; k++) {
+				if (arr[i] == 2)
 					counter++;
-			if (counter == 2)
+				if (arr[i] % k == 1)
+					counter++;
+				if (counter == 2)
 					return arr[i];
 			}
+		}
 	}
 	/*int prime(int arr[], int n)
 	{
@@ -152,7 +154,7 @@ values.*/
 	const int size = 5;
 	int array[size]{ 8, 10, 2, 8, 56 };
 	in_mass(array, size);
-	std::cout << "\nArray Prime Numbers -> " << func1(array, size)<< ", ";
+	std::cout << "\nArray Prime Numbers -> " << Prime(array, size)<< ", ";
 	std::cout << "\b\b.\n";
 	
 	return 0;
