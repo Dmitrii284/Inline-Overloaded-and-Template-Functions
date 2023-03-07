@@ -19,11 +19,10 @@ double mass(double a, double b, double c, double d, double e) {
 }
 /* Task 2*/
 template <typename T>
-double func(T arr[], const int length) {
+T func(T a, T b, T c) {
 	int sum = 0;
-	for (int i = 0; i < length; i++)
-		sum += arr[i];
-	return (double)sum / length;
+	sum = (a + b + c);
+	return (double)sum / 3;
 }
 /* Task 3*/
 	long max_element(int arr[], int n) {
@@ -62,38 +61,6 @@ double func(T arr[], const int length) {
 			}
 		}
 	}
-	/*int prime(int arr[], int n)
-	{
-		int con = 0;
-		bool flag = true;
-		for (int i = 0; i < n; i++)
-		{
-			if (arr[i] == 2)
-			{
-				con++;
-			}
-			else if (arr[i] > 2)
-			{
-				for (int j = 2; j < n; j++)
-				{
-					if (arr[i] % j == 0)
-					{
-						flag = false;
-						break;
-					}
-					else
-					{
-						flag = true;
-					}
-				}
-				if (flag == true)
-					con++;
-			}
-		}
-
-		return con;
-
-	}*/
 	
 
 	int main() {
@@ -105,27 +72,26 @@ double func(T arr[], const int length) {
 	returns their sum. To solve it is necessary
 	use the default settings. Please note that in
 	A function must have one required parameter.*/
-	/*std::cout << "Task 1. \nCreate a function that accepts from 1 to 5 (inclusive)different numbers, after which returns their sum. \n";
+	std::cout << "Task 1. \nCreate a function that accepts from 1 to 5 (inclusive)different numbers, after which returns their sum. \n";
 	std::cout << "Initial five nambers -> \n";
-	double num1 = 0;
-	double num2 = 0;
+	double num1, num2, num3, num4, num5;
+	/*double num2 = 0;
 	double num3 = 0;
 	double num4 = 0;
-	double num5 = 0;
+	double num5 = 0;*/
 	std::cin >> num1 >> num2 >> num3 >> num4 >> num5;		
 	std::cout<<"Sum array elementh: "<< mass(num1, num2, num3, num4, num5) <<std::endl;
-	std::cout << "\n\n";*/
+	std::cout << "\n\n";
 
 	/*Task 2
 Create an inline function that
 takes three numbers and returns their average
 arithmetic. */
-	/*std::cout << "Task2.\nCreate an inline function that takes three numbers and returns their average airthmetic \n";
-	const int size1 = 3;	
-	int array1[size1]{};
+	std::cout << "Task2.\nCreate an inline function that takes three numbers and returns their average airthmetic \n";	
 	std::cout << "Enter three numbers -> \n";
-	std::cin >> array1[0] >> array1[1] >> array1[2];
-	std::cout << "Their average arithmetic: " << func(array1, size1) << std::endl;*/
+	double k, l, m;
+	std::cin >> k >> l >> m;
+	std::cout << "Their average arithmetic: " << func(k,l,m) << std::endl;
 
 
 	/*Task 3
@@ -135,14 +101,14 @@ The function must support the int, short, and double types.
 Also, the function must output the type of the passed to it
 values.*/
 
-	/*std::cout << "Task3.\nCreate an overloaded function to find	the maximum of the three values ​​passed to it, and must output the type of the passed to it values. \n";
+	std::cout << "Task3.\nCreate an overloaded function to find	the maximum of the three values ​​passed to it, and must output the type of the passed to it values. \n";
 	
 	int x[]{ 8, -9, 25 };
 	double y[]{ 8745.854687954, -9456.25125478451, 457.2521554789 };
 	float z[]{ 0.568, -2.2562, 1.54825 };
 	std::cout << max_element(x, 3);
 	std::cout << max_element(y, 3);
-	std::cout << max_element(z, 3);*/
+	std::cout << max_element(z, 3);
 
 	/*Task 4
 		Write a template function that takes
