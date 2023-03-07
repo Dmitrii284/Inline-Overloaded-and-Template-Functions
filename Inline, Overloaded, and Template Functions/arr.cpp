@@ -50,12 +50,15 @@ double func(T arr[], const int length) {
 	/* Task 4*/
 	template <typename T>
 	T func1(T arr[], T num) {
-		
+		int counter;
 		for (int i = 0; i < num; i++)
-			if (arr[i] >= 2)
-				for(int j = 2; j < num; j++)
-					if(arr[j]% j != 0)			
-					return arr[j];			
+			counter = 0;
+			for (int j = 1; j < num; j++) {
+				if (arr[i] % j == 0)
+					counter++;
+			if (counter == 2)
+					return arr[i];
+			}
 	}
 	/*int prime(int arr[], int n)
 	{
