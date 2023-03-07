@@ -49,11 +49,46 @@ double func(T arr[], const int length) {
 	}
 	/* Task 4*/
 	template <typename T>
-	T func1(T arr[], const T length) {
-		for (int i = 0; i < length/2; i++)
-			if (arr[i] <= 1 && arr[i] % arr[i] != 0)
-					return arr[i];			
+	T func1(T arr[], T num) {
+		
+		for (int i = 0; i < num; i++)
+			if (arr[i] >= 2)
+				for(int j = 2; j < num; j++)
+					if(arr[j]% j != 0)			
+					return arr[j];			
 	}
+	/*int prime(int arr[], int n)
+	{
+		int con = 0;
+		bool flag = true;
+		for (int i = 0; i < n; i++)
+		{
+			if (arr[i] == 2)
+			{
+				con++;
+			}
+			else if (arr[i] > 2)
+			{
+				for (int j = 2; j < n; j++)
+				{
+					if (arr[i] % j == 0)
+					{
+						flag = false;
+						break;
+					}
+					else
+					{
+						flag = true;
+					}
+				}
+				if (flag == true)
+					con++;
+			}
+		}
+
+		return con;
+
+	}*/
 	
 
 	int main() {
@@ -112,7 +147,7 @@ values.*/
 	std::cout << "\nTask4.\nThe function is find the first prime number in the array and return him as a result.\n";
 	std::cout << "Initial array \n";
 	const int size = 5;
-	int array[size]{ 7, 10, 2, 8, 56 };
+	int array[size]{ 8, 10, 2, 8, 56 };
 	in_mass(array, size);
 	std::cout << "\nArray Prime Numbers -> " << func1(array, size)<< ", ";
 	std::cout << "\b\b.\n";
