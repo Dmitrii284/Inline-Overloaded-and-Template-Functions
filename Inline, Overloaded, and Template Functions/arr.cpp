@@ -12,17 +12,13 @@ void in_mass(T arr[], const int length) {
 	std::cout << "\b\b]\n";
 }
 /* Task 1*/
-double mass(double a, double b, double c, double d, double e) {
-	double sum = 0;
-	sum = a + b + c + d + e;
-	return sum;
+double mass(double a, double b = 0, double c = 0, double d = 0, double e = 0) {	
+	return (a + b + c + d + e);
 }
 /* Task 2*/
-template <typename T>
-T func(T a, T b, T c) {
-	int sum = 0;
-	sum = (a + b + c);
-	return (double)sum / 3;
+
+inline double func(double a, double b, double c) {	
+	return (a + b + c) / 3.0;
 }
 /* Task 3*/
 	long max_element(int arr[], int n) {
@@ -48,17 +44,14 @@ T func(T a, T b, T c) {
 	}
 	/* Task 4*/
 	template <typename T>
-	T Prime(T arr[], T length) {
+	int prime(T arr[], const int length) {
 		for (int i = 0; i < length; i++) {
 			int counter = 0;
-			for (int k = 1; k < length; k++) {
-				if (arr[i] == 2)
-					counter++;
-				if (arr[i] % k == 1)
-					counter++;
+			for(int j = 1;j <= arr[i];j++)
+				if (arr[i] % j == 0)
+					counter++;				
 				if (counter == 2)
-					return arr[i];
-			}
+					return arr[i];			
 		}
 	}
 	
@@ -73,15 +66,9 @@ T func(T a, T b, T c) {
 	use the default settings. Please note that in
 	A function must have one required parameter.*/
 	std::cout << "Task 1. \nCreate a function that accepts from 1 to 5 (inclusive)different numbers, after which returns their sum. \n";
-	std::cout << "Initial five nambers -> \n";
-	double num1, num2, num3, num4, num5;
-	/*double num2 = 0;
-	double num3 = 0;
-	double num4 = 0;
-	double num5 = 0;*/
-	std::cin >> num1 >> num2 >> num3 >> num4 >> num5;		
-	std::cout<<"Sum array elementh: "<< mass(num1, num2, num3, num4, num5) <<std::endl;
-	std::cout << "\n\n";
+	std::cout << "15, 10 , 20, 50" << std::endl;			
+	std::cout<<"Sum array elementh: "<< mass(15, 10, 20, 50) <<std::endl;
+	
 
 	/*Task 2
 Create an inline function that
@@ -118,10 +105,9 @@ values.*/
 	std::cout << "\nTask4.\nThe function is find the first prime number in the array and return him as a result.\n";
 	std::cout << "Initial array \n";
 	const int size = 5;
-	int array[size]{ 8, 10, 2, 8, 56 };
+	int array[size]{ 8, 1, 2, 8, 56 };
 	in_mass(array, size);
-	std::cout << "\nArray Prime Numbers -> " << Prime(array, size)<< ", ";
-	std::cout << "\b\b.\n";
+	std::cout << "\nArray Prime Numbers -> " << prime(array, size) << std::endl;	
 	
 	return 0;
 }
